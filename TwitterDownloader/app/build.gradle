@@ -1,0 +1,52 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.martiandeveloper.twitterdownloader"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        android.defaultConfig.vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    /*Default*/
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    /*Appcompat*/
+    implementation "androidx.appcompat:appcompat:$appcompat"
+    /*ConstraintLayout*/
+    implementation "androidx.constraintlayout:constraintlayout:$constraintlayout"
+    /*Test*/
+    testImplementation "junit:junit:$junit"
+    androidTestImplementation "androidx.test.ext:junit:$junit2"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso"
+    /*Material*/
+    implementation "com.google.android.material:material:$material"
+    /*RxDownloader*/
+    implementation "com.github.esafirm:RxDownloader:$rxdownloader"
+    /*Twitter*/
+    implementation("com.twitter.sdk.android:twitter:$twitter") {
+        transitive = true
+    }
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+}

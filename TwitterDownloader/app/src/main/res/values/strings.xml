@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Tweet Downloader</string>
+    <string name="tweet_url">Tweet Url</string>
+    <string name="paste_url">Paste Url</string>
+    <string name="download">Download</string>
+    <string name="image">Image</string>
+    <string name="video_gif">Video &amp; Gif</string>
+    <string name="fetching_video">Fetching data....</string>
+    <string name="please_enter_url">Please, enter a URL</string>
+    <string name="the_url_is_not_contains_any_video_or_gif_file">The URL is not contains any media file</string>
+    <string name="request_failed_please_check_your_internet_connection">Request failed, please check your internet connection</string>
+    <string name="please_grant_the_permission_and_try_again">Please grant the permission and try again</string>
+    <string name="download_started">Download started</string>
+    <string name="download_completed">Download completed</string>
+    <string name="something_went_wrong">Something went wrong</string>
+    <string name="_00_00">00:00</string>
+</resources>
